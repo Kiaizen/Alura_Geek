@@ -1,0 +1,366 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+:root {
+  --cor-primaria: #5300c8;
+  --cor-texto: #e5e5e5;
+  --cor-input: #03318c;
+  --cor-texto-btn: #fff;
+  --cor-borda: #000;
+  --cor-hover: #011742;
+  --cor-scrollbar: #D6D6D6;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: "Press start 2p";
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cabecalho {
+  display: flex;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 7px 0.9px var(--cor-texto);
+}
+
+.coracao {
+  max-height: 12lvw;
+}
+
+.produto__section__form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 472px;
+  max-height: 517px;
+  margin: 0 auto;
+}
+
+.produto__section__form > h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 392px;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: auto;
+}
+
+.form__input {
+  border-radius: 30px;
+  border: 3px solid var(--cor-input);
+  height: 12lvw;
+  max-height: 58px;
+  max-width: 392px;
+  padding-left: 12px;
+  font-size: 1rem;
+  font-family: "IBM plex mono";
+  font-weight: 600;
+  color: var(--cor-input);
+}
+
+.form__input::placeholder {
+  color: var(--cor-input);
+}
+
+.form__btn__div {
+  display: flex;
+  gap: 13px;
+  justify-content: space-around;
+}
+
+.form__btn {
+  height: 15lvw;
+  max-height: 55px;
+  width: 40lvw;
+  max-width: 188px;
+  border-radius: 15px;
+  border: 3px solid var(--cor-input);
+  background-color: var(--cor-input);
+  color: var(--cor-texto-btn);
+  font-size: 1.3rem;
+  font-family: "IBM plex mono";
+  font-weight: 400;
+}
+
+.form__btn:hover{
+  background-color: var(--cor-hover);
+}
+
+.form__btn:last-child {
+  background-color: var(--cor-texto-btn);
+  color: var(--cor-input);
+}
+
+.form__btn:hover:last-child{
+  background-color: var(--cor-hover);
+}
+
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 18px auto;
+}
+
+.produto__lista__div {
+  height:auto;
+}
+
+.produto__lista__div::-webkit-scrollbar{
+  border-radius: 100vw;
+  width: 8px;
+  background-color: transparent;
+}
+
+.produto__lista__div::-webkit-scrollbar-thumb{
+  background-color: var(--cor-scrollbar);
+  border-radius: 100vw;
+}
+
+.produto__lista__ul {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+}
+
+.produto__lista__ul::-webkit-scrollbar{
+  border-radius: 100vw;
+  height: 1vh;
+  background-color: transparent;
+}
+
+.produto__lista__ul::-webkit-scrollbar-thumb{
+  background-color: var(--cor-scrollbar);
+  border-radius: 100vw;
+  
+}
+
+.produto__lista {
+  background-color: var(--cor-primaria);
+  padding: 10px;
+  font-family: "IBM plex mono";
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--cor-texto-btn);
+  border: 3px solid var(--cor-borda);
+  border-radius: 10px;
+  box-shadow: -5px 6px 3.3px var(--cor-texto);
+  margin: 44px 10px;
+  height: fit-content;
+}
+
+.produto__lista > img{
+  max-height: 174px;
+  max-width: 176px;
+}
+
+.produto__preco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-btn);
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 -10px 9.5px var(--cor-texto);
+  margin: 50px 0 0 0;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.rodape__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.rodape__subtitle {
+  font-family: "IBM plex mono";
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rodape__subtitle > p:last-child {
+  font-weight: 100;
+}
+
+.lixeira{
+  background-color: transparent;
+  border: transparent;
+}
+
+@media (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1440px;
+    justify-content: center;
+  }
+
+  .produto__section__form {
+    margin: 18px 0;
+  }
+
+  .produtos {
+    padding: 40px;
+  }
+
+  .produto__lista__div {
+    box-shadow: -12px 10px 5.8px var(--cor-texto);
+	  gap: 40px;
+	  margin-top: 60px;
+    overflow-y:scroll;
+    height: 50vh;
+  }
+
+  .produto__lista__ul{
+	overflow: hidden;
+	margin: 0 10px;
+  }
+  .produto__lista{
+	margin: 25px 0;
+  }
+}

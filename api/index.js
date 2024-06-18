@@ -4,14 +4,14 @@ const express = require('express');
 const app = express();
 
 // Middlewares do json-server
-const router = jsonServer.router('db.json');
+const router = jsonServer.router(path.join(__dirname, '..', 'db.json'));
 const middlewares = jsonServer.defaults();
 
 // Usar middlewares do json-server
 app.use(middlewares);
 
 // Servir arquivos estáticos da pasta 'public'
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Usar o router do json-server
 app.use('/api', router);
